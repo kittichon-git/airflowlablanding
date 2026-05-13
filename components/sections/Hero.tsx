@@ -1,6 +1,7 @@
 import { CheckCircle2, Brain } from 'lucide-react'
 import { ButtonLink } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
+import { ScrollReveal } from '@/components/shared/ScrollReveal'
 import { BUNDLE_PRICE } from '@/lib/data'
 
 const BULLETS = [
@@ -78,8 +79,8 @@ export function Hero() {
             </p>
           </div>
 
-          {/* ── Right col (desktop only) ── */}
-          <div className="hidden lg:flex items-center justify-center">
+          {/* ── Right col (desktop only) — ScrollReveal only on visual, not text (LCP) ── */}
+          <ScrollReveal delay={0.2} className="hidden lg:flex items-center justify-center">
             <div className="bg-gradient-to-br from-brand-primary/20 to-bg-card aspect-square rounded-[24px] grid place-items-center w-full max-w-sm border border-brand-primary/20">
               <div className="flex flex-col items-center gap-4 p-8 text-center">
                 <div className="w-20 h-20 rounded-[20px] bg-brand-primary/20 border border-brand-primary/30 grid place-items-center">
@@ -101,7 +102,7 @@ export function Hero() {
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView, useReducedMotion } from 'framer-motion'
 
 export interface ScrollRevealProps {
   children: React.ReactNode
@@ -9,7 +9,6 @@ export interface ScrollRevealProps {
   duration?: number
   once?: boolean
   className?: string
-  as?: React.ElementType
 }
 
 export function ScrollReveal({
@@ -18,14 +17,19 @@ export function ScrollReveal({
   duration = 0.5,
   once = true,
   className,
-  as: Tag = 'div',
 }: ScrollRevealProps) {
-  const ref = useRef<HTMLElement>(null)
-  const isInView = useInView(ref as React.RefObject<Element>, { once, margin: '-80px 0px' })
+  const shouldReduceMotion = useReducedMotion()
+  const ref = useRef<HTMLDivElement>(null)
+  const isInView = useInView(ref, { once, margin: '-80px 0px' })
+
+  // Respect prefers-reduced-motion — render children immediately, no animation
+  if (shouldReduceMotion) {
+    return <div className={className}>{children}</div>
+  }
 
   return (
     <motion.div
-      ref={ref as React.RefObject<HTMLDivElement>}
+      ref={ref}
       className={className}
       initial={{ opacity: 0, y: 24 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}

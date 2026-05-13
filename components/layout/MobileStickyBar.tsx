@@ -1,64 +1,57 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 import { ButtonLink } from '@/components/ui/Button'
-import { BUNDLE_PRICE } from '@/lib/data'
+import { event } from '@/lib/analytics'
+import { BUNDLE_PRICE, STRIPE_CHECKOUT_URL, ORIGINAL_VALUE } from '@/lib/data'
 
 export function MobileStickyBar() {
   const [hidden, setHidden] = useState(false)
-  const sentinelRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const sentinel = sentinelRef.current
-    if (!sentinel) return
+    const pricing = document.getElementById('pricing')
+    if (!pricing) return
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Hide the bar when #pricing sentinel is visible
+        // Hide when #pricing section is intersecting; show again when it leaves
         setHidden(entry.isIntersecting)
       },
-      { threshold: 0.1 },
+      { threshold: 0.05 },
     )
 
-    observer.observe(sentinel)
+    observer.observe(pricing)
     return () => observer.disconnect()
   }, [])
 
   return (
-    <>
-      {/* Sentinel placed at the top of #pricing section — rendered wherever MobileStickyBar is mounted */}
-      <div
-        ref={sentinelRef}
-        id="pricing-sentinel"
-        className="absolute top-0 left-0 w-px h-px pointer-events-none"
-        aria-hidden="true"
-      />
-
-      <div
-        className={[
-          'fixed bottom-0 inset-x-0 z-40 md:hidden',
-          'bg-bg-base/95 backdrop-blur-md border-t border-border-subtle',
-          'px-4 py-3 flex items-center justify-between gap-3',
-          'transition-transform duration-300',
-          hidden ? 'translate-y-full' : 'translate-y-0',
-        ].join(' ')}
-      >
-        <div className="flex flex-col leading-tight">
-          <span className="text-[11px] text-text-muted line-through">฿23,993</span>
-          <span className="text-lg font-bold text-brand-primary">฿{BUNDLE_PRICE.toLocaleString()}</span>
-        </div>
-
-        <ButtonLink
-          as="a"
-          href="#pricing"
-          size="md"
-          variant="primary"
-          className="flex-1 max-w-[220px]"
-        >
-          รับคอร์สนี้เลย
-        </ButtonLink>
+    <motion.div
+      className="fixed bottom-0 inset-x-0 z-40 md:hidden bg-bg-base/95 backdrop-blur-md border-t border-border-subtle px-4 py-3 flex items-center justify-between gap-3"
+      animate={{ y: hidden ? '100%' : 0 }}
+      transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+      initial={false}
+    >
+      <div className="flex flex-col leading-tight">
+        <span className="text-[11px] text-text-muted line-through">
+          ฿{ORIGINAL_VALUE.toLocaleString()}
+        </span>
+        <span className="text-lg font-bold text-brand-primary">
+          ฿{BUNDLE_PRICE.toLocaleString()}
+        </span>
       </div>
-    </>
+
+      <ButtonLink
+        as="a"
+        href={STRIPE_CHECKOUT_URL}
+        size="md"
+        variant="primary"
+        className="flex-1 max-w-[220px]"
+        onClick={() => event({ action: 'click_cta', category: 'conversion', label: 'mobile-sticky', value: BUNDLE_PRICE })}
+      >
+        รับคอร์สนี้เลย
+      </ButtonLink>
+    </motion.div>
   )
 }
 

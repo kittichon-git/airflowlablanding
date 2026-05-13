@@ -1,16 +1,19 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { getOrCreateDeadline, msToHMS, pad2 } from '@/lib/countdown'
+
+const STORAGE_KEY = 'aiflow_deadline'
 
 function useCountdown(hours = 48) {
   const [timeLeft, setTimeLeft] = useState<{ h: number; m: number; s: number } | null>(null)
+  const deadlineRef = useRef<number>(0)
 
   useEffect(() => {
-    const deadline = getOrCreateDeadline(hours)
+    deadlineRef.current = getOrCreateDeadline(hours)
 
     function tick() {
-      const diff = deadline - Date.now()
+      const diff = deadlineRef.current - Date.now()
       if (diff <= 0) {
         setTimeLeft({ h: 0, m: 0, s: 0 })
         return
@@ -19,9 +22,24 @@ function useCountdown(hours = 48) {
       setTimeLeft({ h, m, s })
     }
 
+    // Multi-tab sync: another tab may have reset the deadline
+    function onStorage(e: StorageEvent) {
+      if (e.key === STORAGE_KEY && e.newValue) {
+        const parsed = parseInt(e.newValue, 10)
+        if (!isNaN(parsed)) {
+          deadlineRef.current = parsed
+          tick()
+        }
+      }
+    }
+
     tick()
     const id = setInterval(tick, 1000)
-    return () => clearInterval(id)
+    window.addEventListener('storage', onStorage)
+    return () => {
+      clearInterval(id)
+      window.removeEventListener('storage', onStorage)
+    }
   }, [hours])
 
   return timeLeft
