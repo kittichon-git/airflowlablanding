@@ -6,7 +6,16 @@ import { StatsRow } from '@/components/sections/StatsRow'
 import { PersonaCards } from '@/components/sections/PersonaCards'
 import { HowItWorks } from '@/components/sections/HowItWorks'
 import { SkillsViewer } from '@/components/sections/SkillsViewer'
+import { ModulesGrid } from '@/components/sections/ModulesGrid'
+import { CaseStudies } from '@/components/sections/CaseStudies'
+import { FounderStory } from '@/components/sections/FounderStory'
+import { PlatformCompat } from '@/components/sections/PlatformCompat'
+import { ReviewsGrid } from '@/components/sections/ReviewsGrid'
+import { ShortTestimonials } from '@/components/sections/ShortTestimonials'
 import { ComparisonTable } from '@/components/sections/ComparisonTable'
+import { BonusList } from '@/components/sections/BonusList'
+import { SkillVsPrompt } from '@/components/sections/SkillVsPrompt'
+import { Guarantee } from '@/components/sections/Guarantee'
 import { FAQAccordion } from '@/components/sections/FAQAccordion'
 import { COMPATIBLE_TOOLS } from '@/lib/data'
 
@@ -38,66 +47,48 @@ export default function Home() {
       {/* S07 Skills Viewer */}
       <SkillsViewer />
 
-      {/* S08 Curriculum / Modules — TODO: ModulesSection */}
-      <section id="modules" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S08 Modules Grid — P6]
-      </section>
+      {/* S08 Curriculum / Modules */}
+      <ModulesGrid />
 
       {/* S09 How it works */}
       <HowItWorks />
 
-      {/* S10 Case Studies — TODO: CaseStudiesSection */}
-      <section id="case-studies" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S10 Case Studies — P6]
-      </section>
+      {/* S10 Case Studies */}
+      <CaseStudies />
 
-      {/* S11 Instructor / Founder Story — TODO */}
-      <section id="instructor" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S11 Founder Story — P6]
-      </section>
+      {/* S11 Founder Story */}
+      <FounderStory />
 
-      {/* S12 Platforms — TODO */}
-      <section id="platforms" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S12 Platform Compat — P6]
-      </section>
+      {/* S12 Platforms */}
+      <PlatformCompat />
 
-      {/* S13 Reviews / Testimonials — TODO */}
-      <section id="reviews" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S13 Reviews Grid — P6]
-      </section>
+      {/* S13 Reviews */}
+      <ReviewsGrid />
 
-      {/* S14 Short testimonial marquee — TODO */}
-      <section id="testimonial-marquee" className="py-12 border-b border-border-subtle text-center text-text-muted text-sm">
-        [S14 Short Testimonials — P6]
-      </section>
+      {/* S14 Short Testimonials */}
+      <ShortTestimonials />
 
       {/* S15 Comparison table */}
       <ComparisonTable />
 
-      {/* S16 Bonuses — TODO */}
-      <section id="bonuses" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S16 Bonuses — P6]
-      </section>
+      {/* S16 Bonuses */}
+      <BonusList />
 
-      {/* S17 Pricing — TODO */}
+      {/* S17 Pricing — TODO: P7 */}
       <section id="pricing" className="py-20 border-b border-border-subtle text-center text-text-secondary relative">
         [S17 Pricing Card — P7]
       </section>
 
-      {/* S18 Urgency / Skill vs Prompt — TODO */}
-      <section id="urgency" className="py-12 border-b border-border-subtle text-center text-text-muted text-sm">
-        [S18 Skill vs Prompt — P6]
-      </section>
+      {/* S18 Skill vs Prompt */}
+      <SkillVsPrompt />
 
-      {/* S19 Guarantee — TODO */}
-      <section id="guarantee" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S19 Guarantee — P6]
-      </section>
+      {/* S19 Guarantee */}
+      <Guarantee />
 
       {/* S20 FAQ */}
       <FAQAccordion />
 
-      {/* S21 Final CTA — TODO */}
+      {/* S21 Final CTA — TODO: P7 */}
       <section id="final-cta" className="py-20 border-b border-border-subtle text-center text-text-secondary">
         [S21 Final CTA — P7]
       </section>
@@ -108,15 +99,6 @@ export default function Home() {
         logos={COMPATIBLE_TOOLS}
         label="เชื่อมต่อ apps 400+ ผ่าน n8n โดยไม่เขียน code"
       />
-
-      {/* S23 Platform badges — TODO */}
-      <section id="platform-badges" className="py-12 border-b border-border-subtle text-center text-text-muted text-sm">
-        [S23 Platform Badges — incorporated in P6]
-      </section>
-
-      {/* S24 Community — incorporated in bonuses */}
-
-      {/* S25 Sticky countdown — in Header component */}
     </>
   )
 }

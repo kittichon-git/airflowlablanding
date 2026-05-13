@@ -15,6 +15,8 @@ import {
   COMPARISON_ROWS,
   ORIGINAL_VALUE,
   BONUS_VALUE,
+  FOUNDER_STORY,
+  COMPATIBLE_TOOLS,
 } from './data'
 
 describe('lib/data.ts — price validation', () => {
@@ -99,6 +101,22 @@ describe('lib/data.ts — data integrity', () => {
       expect(row).toHaveProperty('course')
       expect(row).toHaveProperty('freelance')
       expect(row).toHaveProperty('diy')
+    })
+  })
+
+  it('FOUNDER_STORY has at least 3 paragraphs', () => {
+    expect(FOUNDER_STORY.paragraphs.length).toBeGreaterThanOrEqual(3)
+    FOUNDER_STORY.paragraphs.forEach((p) => {
+      expect(typeof p).toBe('string')
+      expect(p.length).toBeGreaterThan(0)
+    })
+  })
+
+  it('COMPATIBLE_TOOLS has at least 6 tools with id and name', () => {
+    expect(COMPATIBLE_TOOLS.length).toBeGreaterThanOrEqual(6)
+    COMPATIBLE_TOOLS.forEach((t) => {
+      expect(t).toHaveProperty('id')
+      expect(t).toHaveProperty('name')
     })
   })
 })
