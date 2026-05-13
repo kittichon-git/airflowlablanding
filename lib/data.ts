@@ -674,6 +674,74 @@ export const FAQS: Faq[] = [
   },
 ]
 
+// ─── COMPATIBLE TOOLS ────────────────────────────────────────────────────────
+
+export interface Tool {
+  id: string
+  name: string
+}
+
+export const COMPATIBLE_TOOLS: Tool[] = [
+  { id: 'claude-api', name: 'Claude API' },
+  { id: 'n8n', name: 'n8n' },
+  { id: 'zapier', name: 'Zapier' },
+  { id: 'make', name: 'Make.com' },
+  { id: 'notion', name: 'Notion' },
+  { id: 'google-sheets', name: 'Google Sheets' },
+  { id: 'airtable', name: 'Airtable' },
+  { id: 'slack', name: 'Slack' },
+  { id: 'gmail', name: 'Gmail' },
+  { id: 'line-oa', name: 'LINE OA' },
+  { id: 'facebook', name: 'Facebook' },
+  { id: 'shopee', name: 'Shopee' },
+]
+
+// ─── FOUNDER STORY ───────────────────────────────────────────────────────────
+
+export const FOUNDER_STORY = {
+  paragraphs: [
+    'ก่อนที่จะมาสร้าง AI Flow Bundle เราเองก็เคยนั่งพิมพ์ prompt เดิมซ้ำๆ ทุกวัน ได้ผลลัพธ์ที่ไม่สม่ำเสมอ และรู้สึกว่าเรา "ใช้ AI" อยู่ แต่จริงๆ แล้วแค่ถามคำถามธรรมดา ไม่ต่างจากการ search Google',
+    'จุดเปลี่ยนมาเมื่อเราเริ่มทดสอบ skill system — แทนที่จะพิมพ์ prompt ใหม่ทุกครั้ง เราสร้าง instruction ที่ครอบคลุม role, context, format และ constraints ไว้ล่วงหน้า แล้วเรียกใช้ซ้ำได้ทันที ผลลัพธ์เปลี่ยนชัดเจนทั้งความเร็วและคุณภาพ',
+    'เราทดสอบกับธุรกิจของตัวเอง กับลูกค้า coaching และกับเพื่อนในวงการ กว่า 500 ชั่วโมง ก่อนที่จะรวบรวมเป็น Bundle นี้ Skills แต่ละตัวผ่านการทดสอบจริงในหลาย context — ไม่ใช่แค่ตัวอย่างที่ดูดีบนกระดาน',
+    'เป้าหมายของเราไม่ใช่ขาย course อีกหนึ่งชุด แต่ให้คุณมีเครื่องมือที่พร้อมใช้งานได้ทันทีวันนี้ เหมือนได้รับ "ทีม AI" ที่ train มาแล้ว ไม่ใช่ได้แค่ความรู้ว่าจะ train ยังไง',
+  ] as string[],
+}
+
+// ─── SKILL VS PROMPT ──────────────────────────────────────────────────────────
+
+export interface SkillVsPromptCard {
+  icon: string
+  title: string
+  description: string
+}
+
+export const SKILL_VS_PROMPT: SkillVsPromptCard[] = [
+  {
+    icon: 'Zap',
+    title: 'Trigger',
+    description:
+      'Skill มี trigger condition ที่บอก Claude ว่าเมื่อไหร่และอย่างไรให้เริ่มทำงาน ต่างจาก prompt ที่ต้องบอกใหม่ทุกครั้ง',
+  },
+  {
+    icon: 'Layout',
+    title: 'Framework',
+    description:
+      'แต่ละ skill มี framework ที่ออกแบบมาเฉพาะงาน เช่น AIDA สำหรับ sales copy หรือ SOP format สำหรับเอกสารองค์กร',
+  },
+  {
+    icon: 'FileCode',
+    title: 'Template',
+    description:
+      'Output format กำหนดไว้ล่วงหน้าตาม use case จริง ทำให้ได้ไฟล์ที่พร้อมใช้ทันที ไม่ต้องแก้โครงสร้างเพิ่ม',
+  },
+]
+
+// ─── STRIPE CHECKOUT URL ─────────────────────────────────────────────────────
+
+export const STRIPE_CHECKOUT_URL =
+  (typeof process !== 'undefined' && process.env?.NEXT_PUBLIC_STRIPE_CHECKOUT_URL) ||
+  '#'
+
 // ─── COMPARISON TABLE ────────────────────────────────────────────────────────
 
 export const COMPARISON_ROWS: ComparisonRow[] = [

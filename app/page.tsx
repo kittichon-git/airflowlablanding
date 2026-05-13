@@ -1,131 +1,125 @@
+import { Hero } from '@/components/sections/Hero'
+import { LogoMarquee } from '@/components/sections/LogoMarquee'
+import { ProblemList } from '@/components/sections/ProblemList'
+import { SolutionFeatures } from '@/components/sections/SolutionFeatures'
+import { StatsRow } from '@/components/sections/StatsRow'
+import { PersonaCards } from '@/components/sections/PersonaCards'
+import { HowItWorks } from '@/components/sections/HowItWorks'
+import { COMPATIBLE_TOOLS } from '@/lib/data'
+
 export default function Home() {
   return (
     <>
-      {/* S01 Hero — TODO: HeroSection */}
-      <section id="hero" className="py-20 text-center text-text-secondary border-b border-border-subtle">
-        [S01 Hero]
-      </section>
+      {/* S01 Hero */}
+      <Hero />
 
-      {/* S02 Social proof bar — TODO: SocialProofBar */}
-      <section id="social-proof" className="py-8 border-b border-border-subtle text-center text-text-muted text-sm">
-        [S02 Social Proof Bar]
-      </section>
+      {/* S02 Social proof / logo bar */}
+      <LogoMarquee
+        id="logos-1"
+        logos={COMPATIBLE_TOOLS}
+        label="ใช้งานร่วมกับเครื่องมือที่คุณใช้อยู่แล้ว"
+      />
 
-      {/* S03 Problem agitation — TODO: ProblemSection */}
-      <section id="problem" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S03 Problem Agitation]
-      </section>
+      {/* S03 Problem agitation */}
+      <ProblemList />
 
-      {/* S04 Solution intro — TODO: SolutionSection */}
-      <section id="solution" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S04 Solution Intro]
-      </section>
+      {/* S04 Solution intro */}
+      <SolutionFeatures />
 
-      {/* S05 Stats strip — TODO: StatsStrip */}
-      <section id="stats" className="py-12 border-b border-border-subtle text-center text-text-muted text-sm">
-        [S05 Stats Strip]
-      </section>
+      {/* S05 Stats strip */}
+      <StatsRow />
 
-      {/* S06 Who is this for — TODO: PersonasSection */}
-      <section id="for-who" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S06 Who Is This For]
-      </section>
+      {/* S06 Who is this for */}
+      <PersonaCards />
 
       {/* S07 What you'll learn — TODO: SkillCategoriesSection */}
       <section id="skills" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S07 What You&apos;ll Learn]
+        [S07 Skills Viewer — P5]
       </section>
 
-      {/* S08 Curriculum — TODO: ModulesSection */}
+      {/* S08 Curriculum / Modules — TODO: ModulesSection */}
       <section id="modules" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S08 Curriculum / Modules]
+        [S08 Modules Grid — P6]
       </section>
 
-      {/* S09 Case studies — TODO: CaseStudiesSection */}
+      {/* S09 How it works */}
+      <HowItWorks />
+
+      {/* S10 Case Studies — TODO: CaseStudiesSection */}
       <section id="case-studies" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S09 Case Studies]
+        [S10 Case Studies — P6]
       </section>
 
-      {/* S10 How it works — TODO: HowItWorksSection */}
-      <section id="how-it-works" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S10 How It Works]
-      </section>
-
-      {/* S11 Instructor — TODO: InstructorSection */}
+      {/* S11 Instructor / Founder Story — TODO */}
       <section id="instructor" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S11 Instructor]
+        [S11 Founder Story — P6]
       </section>
 
-      {/* S12 Platforms — TODO: PlatformsSection */}
+      {/* S12 Platforms — TODO */}
       <section id="platforms" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S12 Platforms]
+        [S12 Platform Compat — P6]
       </section>
 
-      {/* S13 Reviews / Testimonials — TODO: ReviewsSection */}
+      {/* S13 Reviews / Testimonials — TODO */}
       <section id="reviews" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S13 Reviews / Testimonials]
+        [S13 Reviews Grid — P6]
       </section>
 
-      {/* S14 Short testimonial marquee — TODO: TestimonialMarquee */}
+      {/* S14 Short testimonial marquee — TODO */}
       <section id="testimonial-marquee" className="py-12 border-b border-border-subtle text-center text-text-muted text-sm">
-        [S14 Testimonial Marquee]
+        [S14 Short Testimonials — P6]
       </section>
 
-      {/* S15 Comparison table — TODO: ComparisonSection */}
+      {/* S15 Comparison table — TODO */}
       <section id="comparison" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S15 Comparison Table]
+        [S15 Comparison — P5]
       </section>
 
-      {/* S16 Bonuses — TODO: BonusesSection */}
+      {/* S16 Bonuses — TODO */}
       <section id="bonuses" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S16 Bonuses]
+        [S16 Bonuses — P6]
       </section>
 
-      {/* S17 Pricing — TODO: PricingSection */}
+      {/* S17 Pricing — TODO */}
       <section id="pricing" className="py-20 border-b border-border-subtle text-center text-text-secondary relative">
-        {/* MobileStickyBar sentinel is anchored to this section */}
-        [S17 Pricing]
+        [S17 Pricing Card — P7]
       </section>
 
-      {/* S18 Urgency — TODO: UrgencySection */}
+      {/* S18 Urgency / Skill vs Prompt — TODO */}
       <section id="urgency" className="py-12 border-b border-border-subtle text-center text-text-muted text-sm">
-        [S18 Urgency]
+        [S18 Skill vs Prompt — P6]
       </section>
 
-      {/* S19 Guarantee — TODO: GuaranteeSection */}
+      {/* S19 Guarantee — TODO */}
       <section id="guarantee" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S19 Guarantee]
+        [S19 Guarantee — P6]
       </section>
 
-      {/* S20 FAQ — TODO: FaqSection */}
+      {/* S20 FAQ — TODO */}
       <section id="faq" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S20 FAQ]
+        [S20 FAQ Accordion — P5]
       </section>
 
-      {/* S21 Final CTA — TODO: FinalCtaSection */}
+      {/* S21 Final CTA — TODO */}
       <section id="final-cta" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S21 Final CTA]
+        [S21 Final CTA — P7]
       </section>
 
-      {/* S22 Mini reviews strip — TODO: MiniReviewsStrip */}
-      <section id="mini-reviews" className="py-12 border-b border-border-subtle text-center text-text-muted text-sm">
-        [S22 Mini Reviews Strip]
-      </section>
+      {/* S22 Second logo bar */}
+      <LogoMarquee
+        id="logos-2"
+        logos={COMPATIBLE_TOOLS}
+        label="เชื่อมต่อ apps 400+ ผ่าน n8n โดยไม่เขียน code"
+      />
 
-      {/* S23 Platform badges — TODO: PlatformBadges */}
+      {/* S23 Platform badges — TODO */}
       <section id="platform-badges" className="py-12 border-b border-border-subtle text-center text-text-muted text-sm">
-        [S23 Platform Badges]
+        [S23 Platform Badges — incorporated in P6]
       </section>
 
-      {/* S24 Community — TODO: CommunitySection */}
-      <section id="community" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S24 Community]
-      </section>
+      {/* S24 Community — incorporated in bonuses */}
 
-      {/* S25 Sticky countdown — TODO: StickyCountdownBanner */}
-      <section id="sticky-countdown" className="py-8 text-center text-text-muted text-sm">
-        [S25 Sticky Countdown Banner]
-      </section>
+      {/* S25 Sticky countdown — in Header component */}
     </>
   )
 }
