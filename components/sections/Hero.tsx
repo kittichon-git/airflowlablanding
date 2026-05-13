@@ -1,8 +1,11 @@
+'use client'
+
 import { CheckCircle2, Brain } from 'lucide-react'
 import { ButtonLink } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { ScrollReveal } from '@/components/shared/ScrollReveal'
-import { BUNDLE_PRICE } from '@/lib/data'
+import { event } from '@/lib/analytics'
+import { BUNDLE_PRICE, STRIPE_CHECKOUT_URL } from '@/lib/data'
 
 const BULLETS = [
   'Skills 500+ ตัวพร้อมใช้งานทันที ไม่ต้องพิมพ์ prompt เองอีก',
@@ -58,9 +61,10 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <ButtonLink
                 as="a"
-                href="#pricing"
+                href={STRIPE_CHECKOUT_URL}
                 size="lg"
                 variant="primary"
+                onClick={() => event({ action: 'click_cta', category: 'conversion', label: 'hero', value: BUNDLE_PRICE })}
               >
                 สั่งซื้อ Bundle — ฿{BUNDLE_PRICE.toLocaleString()}
               </ButtonLink>

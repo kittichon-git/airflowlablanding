@@ -1,7 +1,10 @@
+'use client'
+
 import { CheckCircle2 } from 'lucide-react'
 import { Section } from '@/components/ui/Section'
 import { ButtonLink } from '@/components/ui/Button'
 import { ScrollReveal } from '@/components/shared/ScrollReveal'
+import { event } from '@/lib/analytics'
 import { MODULES, BONUSES, BUNDLE_PRICE, ORIGINAL_VALUE, BONUS_VALUE, STRIPE_CHECKOUT_URL } from '@/lib/data'
 
 const TOTAL_VALUE = ORIGINAL_VALUE + BONUS_VALUE // 23993 + 8490 = 32483
@@ -98,6 +101,7 @@ export function PricingCard() {
                 variant="primary"
                 fullWidth
                 className="mt-4"
+                onClick={() => event({ action: 'click_cta', category: 'conversion', label: 'pricing-card', value: BUNDLE_PRICE })}
               >
                 สั่งซื้อ Bundle เลย — ฿{BUNDLE_PRICE.toLocaleString()}
               </ButtonLink>

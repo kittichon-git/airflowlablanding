@@ -3,7 +3,8 @@
 import { useEffect, useState } from 'react'
 import { ButtonLink } from '@/components/ui/Button'
 import { Countdown } from '@/components/shared/Countdown'
-import { BUNDLE_PRICE } from '@/lib/data'
+import { event } from '@/lib/analytics'
+import { BUNDLE_PRICE, STRIPE_CHECKOUT_URL } from '@/lib/data'
 
 export function Header() {
   const [visible, setVisible] = useState(false)
@@ -37,10 +38,11 @@ export function Header() {
         {/* CTA */}
         <ButtonLink
           as="a"
-          href="#pricing"
+          href={STRIPE_CHECKOUT_URL}
           size="sm"
           variant="primary"
           className="shrink-0"
+          onClick={() => event({ action: 'click_cta', category: 'conversion', label: 'header', value: BUNDLE_PRICE })}
         >
           รับคอร์สนี้ ฿{BUNDLE_PRICE.toLocaleString()}
         </ButtonLink>

@@ -1,8 +1,11 @@
+'use client'
+
 import { CheckCircle2 } from 'lucide-react'
 import { Section } from '@/components/ui/Section'
 import { ButtonLink } from '@/components/ui/Button'
 import { Countdown } from '@/components/shared/Countdown'
 import { ScrollReveal } from '@/components/shared/ScrollReveal'
+import { event } from '@/lib/analytics'
 import { BUNDLE_PRICE, STRIPE_CHECKOUT_URL } from '@/lib/data'
 
 const RECAP = [
@@ -43,6 +46,7 @@ export function FinalCTA() {
             href={STRIPE_CHECKOUT_URL}
             size="lg"
             variant="primary"
+            onClick={() => event({ action: 'click_cta', category: 'conversion', label: 'final-cta', value: BUNDLE_PRICE })}
           >
             สั่งซื้อ Bundle ตอนนี้ — ฿{BUNDLE_PRICE.toLocaleString()}
           </ButtonLink>
