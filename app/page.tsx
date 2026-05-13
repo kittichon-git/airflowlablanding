@@ -17,6 +17,8 @@ import { BonusList } from '@/components/sections/BonusList'
 import { SkillVsPrompt } from '@/components/sections/SkillVsPrompt'
 import { Guarantee } from '@/components/sections/Guarantee'
 import { FAQAccordion } from '@/components/sections/FAQAccordion'
+import { PricingCard } from '@/components/sections/PricingCard'
+import { FinalCTA } from '@/components/sections/FinalCTA'
 import { COMPATIBLE_TOOLS } from '@/lib/data'
 
 export default function Home() {
@@ -74,10 +76,8 @@ export default function Home() {
       {/* S16 Bonuses */}
       <BonusList />
 
-      {/* S17 Pricing — TODO: P7 */}
-      <section id="pricing" className="py-20 border-b border-border-subtle text-center text-text-secondary relative">
-        [S17 Pricing Card — P7]
-      </section>
+      {/* S17 Pricing */}
+      <PricingCard />
 
       {/* S18 Skill vs Prompt */}
       <SkillVsPrompt />
@@ -88,10 +88,8 @@ export default function Home() {
       {/* S20 FAQ */}
       <FAQAccordion />
 
-      {/* S21 Final CTA — TODO: P7 */}
-      <section id="final-cta" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S21 Final CTA — P7]
-      </section>
+      {/* S21 Final CTA */}
+      <FinalCTA />
 
       {/* S22 Second logo bar */}
       <LogoMarquee
