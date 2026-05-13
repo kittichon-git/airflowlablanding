@@ -20,7 +20,7 @@ export function Header() {
   return (
     <header
       className={[
-        'fixed top-0 inset-x-0 z-50 h-12 bg-bg-base/90 backdrop-blur-md border-b border-border-subtle',
+        'fixed top-0 inset-x-0 z-50 h-12 bg-bg-elevated/90 backdrop-blur-md border-b border-border-strong',
         'transition-transform duration-300',
         visible ? 'translate-y-0' : '-translate-y-full',
       ].join(' ')}

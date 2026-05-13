@@ -17,7 +17,7 @@ export function LogoMarquee({ logos, label, id }: LogoMarqueeProps) {
           {logos.map((tool) => (
             <div
               key={tool.id}
-              className="flex items-center justify-center py-3 px-2 rounded-[8px] border border-border-subtle bg-bg-card opacity-60 hover:opacity-100 hover:text-text-primary transition-opacity duration-200 text-text-muted text-sm font-medium text-center"
+              className="flex items-center justify-center py-3 px-2 rounded-[8px] border border-border-subtle bg-bg-card opacity-50 hover:opacity-100 hover:text-text-primary transition-opacity duration-200 text-text-muted text-sm font-medium text-center"
             >
               {tool.name}
             </div>

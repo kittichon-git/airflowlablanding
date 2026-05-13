@@ -16,7 +16,7 @@ export function Guarantee() {
 
         <ScrollReveal>
           {/* Big circle badge */}
-          <div className="w-32 h-32 bg-brand-accent text-bg-base rounded-full grid place-items-center font-black text-3xl mx-auto leading-tight">
+          <div className="w-32 h-32 bg-brand-accent text-text-primary rounded-full grid place-items-center font-black text-3xl mx-auto leading-tight">
             7<br />Days
           </div>
         </ScrollReveal>

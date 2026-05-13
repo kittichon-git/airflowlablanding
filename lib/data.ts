@@ -392,7 +392,7 @@ export const SHORT_TESTIMONIALS: ShortTestimonial[] = [
     quote:
       'รับลูกค้าได้มากขึ้น 3 เท่า เพราะส่งงานเร็วขึ้น ราคาก็ขึ้นได้เพราะคุณภาพสม่ำเสมอ',
     initials: 'ธส',
-    color: 'bg-brand-accent',
+    color: 'bg-brand-primary',
   },
   {
     id: 'st-3',
@@ -539,7 +539,7 @@ export const REVIEWS: Review[] = [
     quote:
       'ลองใช้ skill ทำ email campaign ให้ลูกค้า ผลตอบรับดีกว่าที่เขียนเองมาก ลูกค้าถามว่าจ้างทีมใหม่มาไหม',
     initials: 'กช',
-    color: 'bg-brand-accent',
+    color: 'bg-brand-primary',
   },
   {
     id: 'r3',
@@ -561,7 +561,7 @@ export const REVIEWS: Review[] = [
     quote:
       'เอา n8n skill ไปต่อกับ CRM ได้เลยโดยไม่ต้องเขียน code เอง ประหยัดค่า developer ไปเยอะมาก',
     initials: 'ภธ',
-    color: 'bg-warning',
+    color: 'bg-brand-primary-dark',
   },
   {
     id: 'r5',
@@ -605,7 +605,7 @@ export const REVIEWS: Review[] = [
     quote:
       'ทีมใช้ร่วมกันผ่าน Project Instructions ได้เลย ไม่ต้องสอนซ้ำ output ออกมาสม่ำเสมอทุกคน',
     initials: 'ชจ',
-    color: 'bg-brand-accent',
+    color: 'bg-brand-primary',
   },
 ]
 

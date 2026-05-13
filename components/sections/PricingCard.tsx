@@ -27,7 +27,7 @@ export function PricingCard() {
       align="center"
     >
       <ScrollReveal>
-        <div className="bg-bg-card rounded-[24px] border-2 border-brand-primary/30 relative overflow-hidden max-w-4xl mx-auto">
+        <div className="bg-bg-card rounded-[24px] border-2 border-brand-primary/50 relative overflow-hidden max-w-4xl mx-auto shadow-2xl ring-2 ring-brand-primary/10">
           {/* Corner ribbon */}
           <div className="absolute top-6 right-0 z-10 pointer-events-none">
             <div className="bg-danger text-white px-8 py-2 font-bold tracking-wide text-sm rotate-45 translate-x-8 -translate-y-2">
@@ -38,7 +38,7 @@ export function PricingCard() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             {/* Left: product mockup */}
             <div className="p-8 flex items-center justify-center border-b border-border-subtle lg:border-b-0 lg:border-r lg:border-border-subtle">
-              <div className="bg-gradient-to-br from-brand-primary/20 to-bg-base aspect-square rounded-[20px] grid place-items-center w-full max-w-xs border border-brand-primary/20">
+              <div className="bg-gradient-to-br from-brand-primary/15 to-bg-elevated aspect-square rounded-[20px] grid place-items-center w-full max-w-xs border border-brand-primary/20">
                 <div className="text-center p-8">
                   <p className="text-6xl font-black text-brand-primary">500+</p>
                   <p className="text-text-secondary mt-2 text-sm">Claude Skills Bundle</p>

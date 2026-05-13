@@ -85,7 +85,7 @@ export function Hero() {
 
           {/* ── Right col (desktop only) — ScrollReveal only on visual, not text (LCP) ── */}
           <ScrollReveal delay={0.2} className="hidden lg:flex items-center justify-center">
-            <div className="bg-gradient-to-br from-brand-primary/20 to-bg-card aspect-square rounded-[24px] grid place-items-center w-full max-w-sm border border-brand-primary/20">
+            <div className="bg-gradient-to-br from-brand-primary/15 via-brand-accent/10 to-bg-elevated aspect-square rounded-[24px] grid place-items-center w-full max-w-sm border border-brand-primary/20">
               <div className="flex flex-col items-center gap-4 p-8 text-center">
                 <div className="w-20 h-20 rounded-[20px] bg-brand-primary/20 border border-brand-primary/30 grid place-items-center">
                   <Brain size={40} className="text-brand-primary" />

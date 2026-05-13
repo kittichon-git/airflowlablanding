@@ -13,7 +13,7 @@ export function FounderStory() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         {/* Image placeholder */}
         <ScrollReveal>
-          <div className="bg-gradient-to-br from-brand-primary/20 to-bg-card aspect-[4/5] rounded-[24px] border border-brand-primary/20 grid place-items-center max-w-sm">
+          <div className="bg-gradient-to-br from-brand-primary/15 to-bg-elevated aspect-[4/5] rounded-[24px] border border-brand-primary/20 grid place-items-center max-w-sm">
             <div className="text-center p-8">
               <p className="text-6xl mb-4">🧠</p>
               <p className="text-brand-primary font-bold text-lg">ทีม AI Flow</p>

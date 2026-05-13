@@ -20,7 +20,7 @@ export function SkillVsPrompt() {
     >
       {/* Large quote */}
       <ScrollReveal>
-        <blockquote className="italic border-l-4 border-brand-accent bg-bg-card p-8 rounded-[12px] text-xl text-text-primary font-semibold mb-8 max-w-2xl mx-auto">
+        <blockquote className="italic border-l-4 border-brand-accent bg-bg-elevated p-8 rounded-[12px] text-xl text-text-primary font-semibold mb-8 max-w-2xl mx-auto">
           &ldquo;Prompt คือคำสั่ง · Skill คือระบบ&rdquo;
         </blockquote>
       </ScrollReveal>

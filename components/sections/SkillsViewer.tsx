@@ -59,7 +59,7 @@ export function SkillsViewer() {
             className={[
               'px-5 py-2.5 rounded-[8px] text-sm font-semibold transition-colors duration-150',
               tab === t
-                ? 'bg-brand-primary text-bg-base'
+                ? 'bg-brand-primary text-white'
                 : 'bg-bg-card border border-border-subtle text-text-secondary hover:bg-bg-card-hover',
             ].join(' ')}
           >
@@ -133,7 +133,7 @@ export function SkillsViewer() {
             </ul>
 
             {/* Locked overlay */}
-            <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-bg-card via-bg-card/95 to-transparent p-8 pt-24 text-center backdrop-blur-sm">
+            <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-white via-white/95 to-transparent p-8 pt-24 text-center backdrop-blur-sm">
               <Lock size={28} className="mx-auto mb-3 text-text-muted" />
               <p className="text-text-secondary text-sm font-semibold">
                 ไฟล์ SKILL.md ปลดล็อกหลังเข้ากลุ่ม Skool

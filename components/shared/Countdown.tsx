@@ -83,7 +83,7 @@ function CountdownDisplay({ h, m, s }: { h: number; m: number; s: number }) {
 
 function TimeUnit({ value, label }: { value: string; label: string }) {
   return (
-    <span className="inline-flex flex-col items-center leading-none">
+    <span className="inline-flex flex-col items-center leading-none bg-bg-card border border-border-subtle px-3 py-2 rounded-md shadow-sm">
       <span className="text-2xl font-bold tabular-nums text-brand-accent">{value}</span>
       <span className="text-[10px] text-text-muted uppercase tracking-wide mt-0.5">{label}</span>
     </span>

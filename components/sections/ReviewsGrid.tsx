@@ -22,7 +22,7 @@ export function ReviewsGrid() {
               </p>
               <div className="flex items-center gap-2 mt-auto pt-1">
                 <div
-                  className={`w-9 h-9 rounded-full grid place-items-center text-xs font-bold text-bg-base shrink-0 ${review.color}`}
+                  className={`w-9 h-9 rounded-full grid place-items-center text-xs font-bold text-white shrink-0 ${review.color}`}
                 >
                   {review.initials}
                 </div>

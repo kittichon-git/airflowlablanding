@@ -22,7 +22,7 @@ export function PersonaCards() {
         {PERSONAS.map((p, i) => (
           <ScrollReveal key={p.id} delay={i * 0.08}>
             <Card variant="persona" className="relative overflow-hidden flex flex-col gap-3">
-              <p className="absolute top-4 left-4 text-5xl font-black text-text-muted/20 select-none leading-none">
+              <p className="absolute top-4 left-4 text-5xl font-black text-text-muted/40 select-none leading-none">
                 {String(i + 1).padStart(2, '0')}
               </p>
               <div className="pt-10">

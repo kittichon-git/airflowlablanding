@@ -39,7 +39,7 @@ export function SolutionFeatures() {
         {FEATURES.map((f, i) => (
           <ScrollReveal key={f.title} delay={i * 0.1}>
             <Card variant="feature">
-              <div className="w-14 h-14 bg-brand-primary/10 rounded-full grid place-items-center mx-auto mb-4 text-2xl">
+              <div className="w-14 h-14 bg-brand-primary/15 rounded-full grid place-items-center mx-auto mb-4 text-2xl">
                 {f.icon}
               </div>
               <h3 className="text-lg font-bold text-text-primary mb-2">{f.title}</h3>

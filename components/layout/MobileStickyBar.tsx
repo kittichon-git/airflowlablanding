@@ -27,7 +27,7 @@ export function MobileStickyBar() {
 
   return (
     <motion.div
-      className="fixed bottom-0 inset-x-0 z-40 md:hidden bg-bg-base/95 backdrop-blur-md border-t border-border-subtle px-4 py-3 flex items-center justify-between gap-3"
+      className="fixed bottom-0 inset-x-0 z-40 md:hidden bg-bg-card backdrop-blur-md border-t border-border-strong shadow-lg px-4 py-3 flex items-center justify-between gap-3"
       animate={{ y: hidden ? '100%' : 0 }}
       transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
       initial={false}

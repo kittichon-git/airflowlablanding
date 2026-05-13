@@ -40,7 +40,7 @@ export function ComparisonTable() {
                   className={[
                     'py-4 px-3 text-center font-semibold border-b border-border-subtle whitespace-nowrap',
                     col.highlight
-                      ? 'bg-brand-primary/10 text-brand-primary border-x border-brand-primary/30'
+                      ? 'bg-brand-primary/5 text-brand-primary border-x-2 border-brand-primary'
                       : 'text-text-secondary',
                   ].join(' ')}
                 >

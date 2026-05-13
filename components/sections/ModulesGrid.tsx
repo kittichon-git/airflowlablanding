@@ -17,7 +17,7 @@ export function ModulesGrid() {
           <ScrollReveal key={mod.id} delay={i * 0.06}>
             <Card variant="module" className="relative">
               {/* skillCount badge top-right */}
-              <div className="absolute top-4 right-4 bg-brand-primary/10 text-brand-primary px-3 py-1 rounded-full text-sm font-bold">
+              <div className="absolute top-4 right-4 bg-brand-primary/15 text-brand-primary px-3 py-1 rounded-full text-sm font-bold">
                 {mod.skillCount}+ Skills
               </div>
 
@@ -29,7 +29,7 @@ export function ModulesGrid() {
                 {mod.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="bg-bg-elevated text-text-secondary px-2 py-1 rounded text-xs font-mono"
+                    className="bg-bg-elevated border border-border-subtle text-text-primary px-2 py-1 rounded text-xs font-mono"
                   >
                     {tag}
                   </span>
@@ -53,7 +53,7 @@ export function ModulesGrid() {
 
       {/* Total bar */}
       <ScrollReveal delay={0.4}>
-        <div className="mt-8 bg-gradient-to-r from-brand-primary/10 to-brand-accent/10 border border-brand-primary/30 rounded-[12px] p-6 text-center">
+        <div className="mt-8 bg-gradient-to-r from-brand-primary/5 to-brand-accent/5 border-2 border-brand-primary/20 rounded-[12px] p-6 text-center">
           <p className="text-text-primary leading-relaxed">
             รวม{' '}
             <strong className="text-brand-primary">7 modules</strong> ·{' '}

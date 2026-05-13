@@ -31,7 +31,7 @@ export function ProblemList() {
       </div>
 
       <ScrollReveal delay={0.4}>
-        <div className="mt-10 bg-danger/10 border border-danger/30 p-6 rounded-[12px] text-center">
+        <div className="mt-10 bg-danger/5 border-2 border-danger/30 p-6 rounded-[12px] text-center">
           <p className="text-text-primary font-semibold text-lg leading-relaxed">
             ทุกวันที่ยังพิมพ์ prompt เอง ={' '}
             <span className="text-danger">เสียเวลา 3-5 ชม./วัน</span> ={' '}

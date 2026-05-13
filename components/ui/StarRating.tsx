@@ -28,7 +28,7 @@ export function StarRating({ count, size = 'md', className }: StarRatingProps) {
             key={i}
             width={px}
             height={px}
-            className={filled ? 'text-brand-accent' : 'text-text-muted'}
+            className={filled ? 'text-brand-accent' : 'text-border-strong'}
             fill={filled ? 'currentColor' : 'none'}
             strokeWidth={1.5}
           />

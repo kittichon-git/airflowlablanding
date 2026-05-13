@@ -11,12 +11,12 @@ export interface CardProps {
 }
 
 const variantClasses: Record<CardVariant, string> = {
-  default:  'bg-bg-card border border-border-subtle rounded-[12px] p-6 sm:p-8',
-  feature:  'bg-bg-card border border-border-subtle rounded-[12px] p-6 sm:p-8 text-center',
-  persona:  'bg-bg-card border border-border-subtle rounded-[12px] p-6',
-  module:   'bg-bg-card border border-border-subtle rounded-[12px] p-6 sm:p-8 pt-8 sm:pt-10',
-  bonus:    'bg-bg-elevated border border-border-strong rounded-[12px] p-6',
-  review:   'bg-bg-card border border-border-subtle rounded-[12px] p-6 flex flex-col gap-3',
+  default:  'bg-bg-card border border-border-subtle rounded-[12px] p-6 sm:p-8 shadow-sm',
+  feature:  'bg-bg-card border border-border-subtle rounded-[12px] p-6 sm:p-8 text-center shadow-sm',
+  persona:  'bg-bg-card border border-border-subtle rounded-[12px] p-6 shadow-sm',
+  module:   'bg-bg-card border border-border-subtle rounded-[12px] p-6 sm:p-8 pt-8 sm:pt-10 shadow-sm',
+  bonus:    'bg-bg-elevated border border-border-strong rounded-[12px] p-6 shadow-sm',
+  review:   'bg-bg-card border border-border-subtle rounded-[12px] p-6 flex flex-col gap-3 shadow-sm',
 }
 
 export function Card({
@@ -30,7 +30,7 @@ export function Card({
     <Tag
       className={cn(
         variantClasses[variant],
-        hover && 'hover:bg-bg-card-hover hover:border-border-strong transition-colors duration-200 cursor-pointer',
+        hover && 'hover:bg-bg-card-hover hover:border-border-strong hover:shadow-md transition-all duration-200 cursor-pointer',
         className,
       )}
     >

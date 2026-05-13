@@ -21,7 +21,7 @@ export function HowItWorks() {
         {STEPS.map((step, i) => (
           <ScrollReveal key={step.number} delay={i * 0.12}>
             <div className="flex flex-col items-center text-center gap-4 p-6">
-              <p className="text-6xl font-black text-brand-primary/30 leading-none">
+              <p className="text-6xl font-black text-brand-primary/50 leading-none">
                 {step.number}
               </p>
               <div className="w-12 h-12 grid place-items-center">

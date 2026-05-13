@@ -38,7 +38,7 @@ export function BonusList() {
                   <span className="line-through text-text-muted text-sm">
                     ฿{bonus.value.toLocaleString()}
                   </span>
-                  <span className="bg-success/20 text-success px-3 py-1 rounded-full font-bold text-sm">
+                  <span className="bg-success text-white px-3 py-1 rounded-full font-bold text-sm">
                     ฟรี
                   </span>
                 </div>
@@ -49,7 +49,7 @@ export function BonusList() {
       </div>
 
       <ScrollReveal delay={0.4}>
-        <div className="mt-8 bg-success/10 border border-success/30 rounded-[12px] p-6 text-center">
+        <div className="mt-8 bg-success/5 border border-success/30 rounded-[12px] p-6 text-center">
           <p className="text-text-primary font-semibold">
             Total Bonus Value{' '}
             <strong className="text-success text-2xl">฿{BONUS_VALUE.toLocaleString()}</strong>

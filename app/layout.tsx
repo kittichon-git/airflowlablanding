@@ -1,24 +1,30 @@
-import type { Metadata } from 'next'
-import { Noto_Sans_Thai, Inter } from 'next/font/google'
+import type { Metadata, Viewport } from 'next'
+import { Bai_Jamjuree, Kanit } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { MobileStickyBar } from '@/components/layout/MobileStickyBar'
 import { AnalyticsScripts } from '@/components/analytics/AnalyticsScripts'
 
-const notoThai = Noto_Sans_Thai({
+const fontThai = Bai_Jamjuree({
   variable: '--font-noto-thai',
-  subsets: ['thai'],
-  weight: ['400', '600', '700', '900'],
-  display: 'swap',
-})
-
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
+  subsets: ['thai', 'latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
 })
+
+const fontLatin = Kanit({
+  variable: '--font-inter',
+  subsets: ['thai', 'latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+})
+
+export const viewport: Viewport = {
+  themeColor: [{ media: '(prefers-color-scheme: light)', color: '#fdfaf6' }],
+  width: 'device-width',
+  initialScale: 1,
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -61,7 +67,7 @@ export default function RootLayout({
   return (
     <html
       lang="th"
-      className={`${notoThai.variable} ${inter.variable} h-full antialiased`}
+      className={`${fontThai.variable} ${fontLatin.variable} h-full antialiased`}
     >
       <body className="font-thai min-h-full flex flex-col">
         <a

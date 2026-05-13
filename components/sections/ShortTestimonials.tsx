@@ -18,7 +18,7 @@ export function ShortTestimonials() {
             <Card variant="review" className="items-start">
               <div className="flex items-center gap-3">
                 <div
-                  className={`w-14 h-14 rounded-full grid place-items-center font-bold text-bg-base text-sm shrink-0 ${t.color}`}
+                  className={`w-14 h-14 rounded-full grid place-items-center font-bold text-white text-sm shrink-0 ${t.color}`}
                 >
                   {t.initials}
                 </div>

@@ -1,25 +1,36 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-primary: #00d4c8;
-  --color-brand-primary-dark: #00a89c;
-  --color-brand-accent: #ffb800;
-  --color-bg-base: #0a0e1a;
-  --color-bg-elevated: #131826;
-  --color-bg-card: #1a2033;
-  --color-bg-card-hover: #232a40;
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #b8c0d0;
-  --color-text-muted: #6b7689;
-  --color-success: #00d4a8;
-  --color-warning: #ff9a3c;
-  --color-danger: #ff5c5c;
-  --color-border-subtle: #232a40;
-  --color-border-strong: #3a4259;
+  /* Brand — Warm Cream + Teal */
+  --color-brand-primary: #0d9488;
+  --color-brand-primary-dark: #0f766e;
+  --color-brand-accent: #d97706;
 
+  /* Surfaces — Cream tones */
+  --color-bg-base: #fdfaf6;
+  --color-bg-elevated: #f7f1e8;
+  --color-bg-card: #ffffff;
+  --color-bg-card-hover: #f9f4ec;
+
+  /* Text — Dark on cream */
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #525252;
+  --color-text-muted: #8a8a8a;
+
+  /* Semantic */
+  --color-success: #059669;
+  --color-warning: #d97706;
+  --color-danger: #dc2626;
+
+  /* Borders */
+  --color-border-subtle: #ede4d3;
+  --color-border-strong: #d9cdb5;
+
+  /* Fonts (เก็บเดิม) */
   --font-thai: var(--font-noto-thai), system-ui, sans-serif;
   --font-latin: var(--font-inter), system-ui, sans-serif;
 
+  /* Radius (เก็บเดิม) */
   --radius-card: 12px;
   --radius-button: 8px;
   --radius-hero: 24px;

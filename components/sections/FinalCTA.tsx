@@ -20,7 +20,7 @@ export function FinalCTA() {
       id="final-cta"
       eyebrow=""
       align="center"
-      className="bg-gradient-to-b from-bg-base to-bg-card/30"
+      className="bg-gradient-to-b from-bg-elevated to-bg-base"
     >
       <div className="max-w-3xl mx-auto text-center flex flex-col items-center gap-8">
         <ScrollReveal>
