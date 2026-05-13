@@ -2,6 +2,9 @@
 
 # dependencies
 /node_modules
+
+# npm cache (moved to D: due to C: disk space)
+/npm-cache
 /.pnp
 .pnp.*
 .yarn/*
