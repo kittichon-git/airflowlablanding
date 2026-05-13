@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Noto_Sans_Thai, Inter } from 'next/font/google'
 import './globals.css'
+import { Header } from '@/components/layout/Header'
+import { Footer } from '@/components/layout/Footer'
+import { MobileStickyBar } from '@/components/layout/MobileStickyBar'
 
 const notoThai = Noto_Sans_Thai({
   variable: '--font-noto-thai',
@@ -30,7 +33,12 @@ export default function RootLayout({
       lang="th"
       className={`${notoThai.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="font-thai min-h-full flex flex-col">{children}</body>
+      <body className="font-thai min-h-full flex flex-col">
+        <Header />
+        <main className="flex-1 pt-12">{children}</main>
+        <Footer />
+        <MobileStickyBar />
+      </body>
     </html>
   )
 }
