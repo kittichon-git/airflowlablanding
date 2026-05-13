@@ -92,7 +92,7 @@ export default function PreviewPage() {
           </Card>
           <Card variant="review">
             <StarRating count={5} size="sm" />
-            <p className="text-text-primary text-sm">"Review Card variant"</p>
+            <p className="text-text-primary text-sm">&ldquo;Review Card variant&rdquo;</p>
             <p className="text-text-muted text-xs">— Reviewer Name</p>
           </Card>
           <Card variant="default" hover>

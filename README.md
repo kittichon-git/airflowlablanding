@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# aiflowlab — Landing Page
 
-## Getting Started
+Claude Skills Bundle landing page (Thai market). Built with Next.js 15 + Tailwind v4.
 
-First, run the development server:
+## Quick Start
 
 ```bash
+npm install
+cp .env.example .env.local  # fill in values
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---|---|
+| `npm run dev` | Dev server with Turbopack |
+| `npm run build` | Production build |
+| `npm run start` | Production server |
+| `npm run lint` | ESLint check |
+| `npm run test` | Vitest unit tests |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  layout.tsx          # Root layout: fonts, metadata, Header/Footer/Analytics
+  page.tsx            # Landing page (22 sections S01-S22)
+  globals.css         # Tailwind v4 @theme design tokens
+  opengraph-image.tsx # Dynamic OG image (edge runtime)
+  sitemap.ts          # /sitemap.xml
+  robots.ts           # /robots.txt
+  about/              # Static page
+  privacy/            # PDPA privacy policy
+  terms/              # Terms of service
+  contact/            # Contact page
+  preview/            # Component storybook (dev only)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+components/
+  layout/             # Header, Footer, MobileStickyBar
+  sections/           # 22 landing page sections (Hero to FinalCTA)
+  shared/             # ScrollReveal, Countdown
+  ui/                 # Button, Badge, Card, Section, StarRating
+  analytics/          # GA4 + FB Pixel scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+lib/
+  data.ts             # All static content (single source of truth)
+  analytics.ts        # GA4 + FB Pixel event helpers
+  countdown.ts        # localStorage-based 48h deadline
+  utils.ts            # cn() = clsx + tailwind-merge
+```
 
-## Deploy on Vercel
+## Design Tokens (Tailwind v4)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Colors defined as CSS variables in `globals.css`:
+- `bg-bg-base` = #0a0e1a (page background)
+- `text-brand-primary` = #00d4c8 (teal)
+- `text-brand-accent` = #ffb800 (amber)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See [CLAUDE.md](./CLAUDE.md) for full spec.
+
+## Deploy
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for full deployment checklist.

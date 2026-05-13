@@ -18,12 +18,16 @@ export function Footer() {
         {/* Links */}
         <div className="space-y-3">
           <p className="text-text-secondary font-semibold">ลิงก์ด่วน</p>
-          <nav className="flex flex-col gap-2">
+          <nav aria-label="ลิงก์หลัก" className="flex flex-col gap-2">
             {[
               { label: 'หลักสูตร', href: '#modules' },
               { label: 'รีวิวจากนักเรียน', href: '#reviews' },
               { label: 'ราคา', href: '#pricing' },
               { label: 'คำถามที่พบบ่อย', href: '#faq' },
+              { label: 'เกี่ยวกับเรา', href: '/about' },
+              { label: 'ติดต่อ', href: '/contact' },
+              { label: 'นโยบายความเป็นส่วนตัว', href: '/privacy' },
+              { label: 'ข้อกำหนดการใช้งาน', href: '/terms' },
             ].map(({ label, href }) => (
               <a
                 key={href}
