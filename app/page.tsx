@@ -5,6 +5,9 @@ import { SolutionFeatures } from '@/components/sections/SolutionFeatures'
 import { StatsRow } from '@/components/sections/StatsRow'
 import { PersonaCards } from '@/components/sections/PersonaCards'
 import { HowItWorks } from '@/components/sections/HowItWorks'
+import { SkillsViewer } from '@/components/sections/SkillsViewer'
+import { ComparisonTable } from '@/components/sections/ComparisonTable'
+import { FAQAccordion } from '@/components/sections/FAQAccordion'
 import { COMPATIBLE_TOOLS } from '@/lib/data'
 
 export default function Home() {
@@ -32,10 +35,8 @@ export default function Home() {
       {/* S06 Who is this for */}
       <PersonaCards />
 
-      {/* S07 What you'll learn — TODO: SkillCategoriesSection */}
-      <section id="skills" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S07 Skills Viewer — P5]
-      </section>
+      {/* S07 Skills Viewer */}
+      <SkillsViewer />
 
       {/* S08 Curriculum / Modules — TODO: ModulesSection */}
       <section id="modules" className="py-20 border-b border-border-subtle text-center text-text-secondary">
@@ -70,10 +71,8 @@ export default function Home() {
         [S14 Short Testimonials — P6]
       </section>
 
-      {/* S15 Comparison table — TODO */}
-      <section id="comparison" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S15 Comparison — P5]
-      </section>
+      {/* S15 Comparison table */}
+      <ComparisonTable />
 
       {/* S16 Bonuses — TODO */}
       <section id="bonuses" className="py-20 border-b border-border-subtle text-center text-text-secondary">
@@ -95,10 +94,8 @@ export default function Home() {
         [S19 Guarantee — P6]
       </section>
 
-      {/* S20 FAQ — TODO */}
-      <section id="faq" className="py-20 border-b border-border-subtle text-center text-text-secondary">
-        [S20 FAQ Accordion — P5]
-      </section>
+      {/* S20 FAQ */}
+      <FAQAccordion />
 
       {/* S21 Final CTA — TODO */}
       <section id="final-cta" className="py-20 border-b border-border-subtle text-center text-text-secondary">
